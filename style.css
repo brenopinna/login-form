@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Poppins", sans-serif;
+}
+
+:root{
+   --cor-fundo: #6016E1;
+   --cor-twitter: #56A6F1;
+   --cor-facebook: #1E3C73;
+   --altura-elementos: 40px;
+   --margem-padrao: 20px;
+   --form-largura: 370px;
+}
+
+.botao{
+   cursor: pointer;
+   width: 100%;
+   border-radius: 5px;
+   height: var(--altura-elementos);
+   border: 0;
+   outline: 0;
+   color: white;
+   font-size: 1em;
+   font-weight: 500 !important;
+   background-color: blue;
+}
+
+body{
+   background-color: var(--cor-fundo);
+}
+
+form{
+   max-width: var(--form-largura);
+   margin: 100px auto 30px;
+   border-radius: 8px;
+   background-color: white;
+   box-shadow: 5px 4px 14px 4px rgb(0 0 0 / 28%);
+   padding: 40px;
+}
+
+form header h1{
+   position: relative;
+   font-size: 1.8em;
+   margin-bottom: var(--margem-padrao);
+}
+
+form header h1::after{
+   content: '';
+   position: absolute;
+   bottom: 5px;
+   left: 0;
+   width: 1em;
+   height: 4px;
+   background-color: var(--cor-fundo);
+}
+
+.input-container{
+   position: relative;
+   margin-bottom: var(--margem-padrao);
+}
+
+.input-conta{
+   width: 100%;
+   font-size: 1em;
+   height: var(--altura-elementos);
+   border: 0;
+   outline: 0;
+}
+
+.underline::before, .underline::after{
+   content: '';
+   position: absolute;
+   bottom: 4px;
+   left: 0;
+   width: 100%;
+   height: 2px;
+   background-color: rgba(0,0,0,0.4);
+}
+
+.underline::after{
+   background-color: var(--cor-fundo);
+   transform-origin: left;
+   transition: 0.4s;
+   transform: scaleX(0);
+}
+
+.input-conta:focus + .underline::after{
+   transform: scaleX(1);
+}
+
+.submit-cadastro{
+   background-color: var(--cor-fundo);
+   margin-top: 10px;
+}
+
+footer p{
+   font-size: 0.9em;
+   margin: var(--margem-padrao) 0;
+   text-align: center;
+}
+
+.rede-social{
+   line-height: var(--altura-elementos);
+}
+
+.rede-social i{
+   width: 40px;
+   text-align: center;
+}
+
+#twitter{
+   background-color: var(--cor-twitter);
+   margin-bottom: var(--margem-padrao);
+}
+
+#facebook{
+   background-color: var(--cor-facebook);
+}
+
+@media screen and (max-width: 370px) {
+   form{
+      padding: 40px 15px;
+   }
+}
